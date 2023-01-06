@@ -57,6 +57,11 @@ public class Animal {
 
     public static void main(String[] args) {
         Animal cat = new Animal("Vaska",3,true);
+        Animal dog = new Animal("Rex",7,true);
         System.out.println(cat.toString());
+        System.out.println("\n cat == dog ?");
+        System.out.println(dog.equals(cat));
+        System.out.println("\n cat == cat ?");
+        System.out.println(cat.equals(cat));
     }
 }
