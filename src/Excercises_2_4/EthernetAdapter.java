@@ -1,4 +1,4 @@
-package Excercise2_Device;
+package Excercises_2_4;
 
 import java.util.Objects;
 
@@ -49,14 +49,8 @@ private String mac;
                                                             else return false;
     }
 
-//
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//        EthernetAdapter that = (EthernetAdapter) o;
-//        return speed == that.speed && Objects.equals(mac, that.mac);
-//    }
-
-
+    @Override
+    public int hashCode() {
+        return Objects.hash(getSerialNumber(),mac);
+    }
 }

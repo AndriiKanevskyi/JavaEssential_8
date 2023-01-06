@@ -1,4 +1,4 @@
-package Excercise2_Device;
+package Excercises_2_4;
 
 public class Device {
     private String manufacturer;

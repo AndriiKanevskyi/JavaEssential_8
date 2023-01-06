@@ -1,4 +1,6 @@
-package Excercise2_Device;
+package Excercises_2_4;
+
+import java.util.Objects;
 
 public class Monitor extends Device{
     private int resolutionX;
@@ -45,5 +47,10 @@ public class Monitor extends Device{
                  getResolutionX()== that.getResolutionX()&&
                  getResolutionY()== that.getResolutionY()){return true;}
                                                           else return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getSerialNumber(),resolutionX, resolutionY);
     }
 }
