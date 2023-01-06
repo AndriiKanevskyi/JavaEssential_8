@@ -25,4 +25,25 @@ public class Monitor extends Device{
     public void setResolutionY(int resolutionY) {
         this.resolutionY = resolutionY;
     }
+
+    @Override
+    public String toString() {
+        return "Monitor :" +
+                " "+ "manufacturer :"+this.getManufacturer()+" "+
+                "price :"+this.getPrice()+" "+
+                "serialNumber :"+this.getSerialNumber()+" "+
+                "resolutionX=" + resolutionX +" "+
+                ", resolutionY=" + resolutionY +" ";
+    }
+
+    public boolean equals(Object obj) {
+        if (this==obj)return true;
+        if (obj==null) return false;
+        if (getClass()!=obj.getClass())return false;
+        Monitor that = (Monitor) obj;
+        if (getSerialNumber()==that.getSerialNumber() &&
+                 getResolutionX()== that.getResolutionX()&&
+                 getResolutionY()== that.getResolutionY()){return true;}
+                                                          else return false;
+    }
 }
